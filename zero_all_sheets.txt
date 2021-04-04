@@ -1,0 +1,11 @@
+Sub ZeroAllSheets()
+    Dim xSh As Worksheet
+    MsgBox ("Click OK to clear calculations from all worksheets")
+    Application.ScreenUpdating = False
+    For Each xSh In Worksheets
+        xSh.Select
+        Range("I2:M100").Clear
+        Range("O2:P4").Clear
+    Next
+    Application.ScreenUpdating = True
+End Sub
